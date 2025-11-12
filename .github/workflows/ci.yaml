@@ -26,8 +26,7 @@ jobs:
           pip install -r requirements.txt
 
       - name: Run tests
-        working-directory: ci-pipeline-ml-model
-        run: pytest -v
+        run: pytest ci-pipeline-ml-model -v
 
       - name: Lint the code
         working-directory: ci-pipeline-ml-model
