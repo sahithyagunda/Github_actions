@@ -1,5 +1,13 @@
 name: ML CI Test & Lint
-on: [push,pull_request]
+on:
+  push:
+    paths:
+      - 'ci-pipeline-ml-model/**'
+  
+  pull_request:
+    paths:
+      - 'ci-pipeline-ml-model/**'
+    
 jobs:
   test:
     runs-on: ubuntu-latest
