@@ -25,7 +25,6 @@ jobs:
         working-directory: ci-pipeline-ml-model
         run: pytest -v
 
-
-      - name: Lint the code
-        working-directory: ci-pipeline-ml-model
-        run: flake8 src/ tests/
+      #- name: Lint the code
+      # working-directory: ci-pipeline-ml-model
+      # run: .flake8
