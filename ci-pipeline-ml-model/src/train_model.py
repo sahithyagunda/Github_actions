@@ -24,7 +24,7 @@ def evaluate(model, X_test, y_test):
 
 
 if __name__ == "__main__":
-    X_train,X_test,y_train,y_test = loading_data()
+    X_train, X_test, y_train, y_test = loading_data()
     model = train(X_train, y_train)
     accuracy = evaluate(model, X_test, y_test)
     pickle.dump(model, open('model.pkl', 'wb'))
