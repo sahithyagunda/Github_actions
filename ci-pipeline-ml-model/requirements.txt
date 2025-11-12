@@ -1,4 +1,4 @@
 pytest
 scikit-learn
 flake8
-pickle
+#pickle
