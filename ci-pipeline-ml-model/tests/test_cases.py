@@ -14,7 +14,8 @@ from sklearn.ensemble import RandomForestClassifier
 def test_loading_data():
     X_train,X_test,y_train,y_test = loading_data()
     assert X_train.shape[0] > 0
-    assert X_test.shape[0] > X_train.shape[0]
+    assert X_test.shape[0] > 0
+    assert len(y_train) == X_train.shape[0]
 
 def test_model_training():
     """Check model training returns a RandomForestClassifier."""
