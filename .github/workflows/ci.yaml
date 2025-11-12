@@ -1,12 +1,8 @@
 name: ML CI Test & Lint
 on:
   push:
-    paths:
-      - 'ci-pipeline-ml-model/**'
-  
   pull_request:
-    paths:
-      - 'ci-pipeline-ml-model/**'
+    
     
 jobs:
   test:
@@ -26,7 +22,9 @@ jobs:
           pip install -r requirements.txt
 
       - name: Run tests
-        run: pytest ci-pipeline-ml-model -v
+        working-directory: ci-pipeline-ml-model
+        run: pytest -v
+
 
       - name: Lint the code
         working-directory: ci-pipeline-ml-model
